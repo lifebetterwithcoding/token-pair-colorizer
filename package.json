@@ -1,6 +1,6 @@
 {
-	"name": "firstextension",
-	"displayName": "My First Extension",
+	"name": "token-pair-colorizer",
+	"displayName": "Token pair Colorizer",
 	"description": "",
 	"version": "0.0.1",
 	"engines": {

@@ -1,7 +1,7 @@
 import {TokenType, tokens} from './types'
 import {Pair} from './Pair'
 
-export class BracketManager{
+export class PairManager{
 
      private allBrackets : Pair[];
      text : string;

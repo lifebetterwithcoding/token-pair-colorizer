@@ -3,7 +3,7 @@
 import * as vscode from 'vscode';
 import {colors} from './colors';
 import { Pair } from './Pair';
-import {BracketManager} from './BracketsManager';
+import {PairManager} from './PairManager';
 
 export function activate(context: vscode.ExtensionContext) {
 	let timeout: NodeJS.Timer | undefined = undefined;
@@ -17,9 +17,9 @@ export function activate(context: vscode.ExtensionContext) {
           }
           decorationsPerColor = initDecorationsMap();
           const text = activeEditor.document.getText();
-          let bracketManager = new BracketManager(text);
+          let pairManager = new PairManager(text);
           resetDecorations(decorationTypes);
-          let allBrackets = bracketManager.getAllBrackets();
+          let allBrackets = pairManager.getAllBrackets();
           for(let tb of allBrackets){
                const decorations= decorationPerPair(activeEditor,tb);
                const color = getColor(tb.color);
